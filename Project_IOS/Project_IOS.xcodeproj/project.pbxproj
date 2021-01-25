@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6428747425BF33B30097B32C /* ChooseSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428747225BF33B30097B32C /* ChooseSportViewController.swift */; };
+		6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428747325BF33B30097B32C /* ChooseSportViewController.xib */; };
+		6428747825BF353F0097B32C /* connectApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428747725BF353F0097B32C /* connectApi.swift */; };
 		643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643937C925BF323500B06CB4 /* HomeViewController.swift */; };
 		643937CC25BF323500B06CB4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643937CA25BF323500B06CB4 /* HomeViewController.xib */; };
 		64D149BC25BCA2BC00ACA836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D149BB25BCA2BC00ACA836 /* AppDelegate.swift */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6428747225BF33B30097B32C /* ChooseSportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSportViewController.swift; sourceTree = "<group>"; };
+		6428747325BF33B30097B32C /* ChooseSportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseSportViewController.xib; sourceTree = "<group>"; };
+		6428747725BF353F0097B32C /* connectApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectApi.swift; sourceTree = "<group>"; };
 		643937C925BF323500B06CB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		643937CA25BF323500B06CB4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		64D149B825BCA2BC00ACA836 /* Project_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +44,8 @@
 			children = (
 				643937C925BF323500B06CB4 /* HomeViewController.swift */,
 				643937CA25BF323500B06CB4 /* HomeViewController.xib */,
+				6428747225BF33B30097B32C /* ChooseSportViewController.swift */,
+				6428747325BF33B30097B32C /* ChooseSportViewController.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -61,6 +69,7 @@
 		64D149BA25BCA2BC00ACA836 /* Project_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				6428747725BF353F0097B32C /* connectApi.swift */,
 				643937C025BF30E500B06CB4 /* Scene */,
 				64D149BB25BCA2BC00ACA836 /* AppDelegate.swift */,
 				64D149C425BCA2BD00ACA836 /* Assets.xcassets */,
@@ -126,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */,
 				64D149C525BCA2BD00ACA836 /* Assets.xcassets in Resources */,
 				643937CC25BF323500B06CB4 /* HomeViewController.xib in Resources */,
 			);
@@ -139,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D149BC25BCA2BC00ACA836 /* AppDelegate.swift in Sources */,
+				6428747425BF33B30097B32C /* ChooseSportViewController.swift in Sources */,
 				643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */,
+				6428747825BF353F0097B32C /* connectApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

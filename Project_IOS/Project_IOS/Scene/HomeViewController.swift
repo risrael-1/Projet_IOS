@@ -11,7 +11,14 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let chooseSportViewController = ChooseSportViewController(nibName: "ChooseSportViewController", bundle: nil)
+            self.navigationController?.pushViewController(chooseSportViewController, animated: true)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
 
