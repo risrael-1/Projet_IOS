@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Project_IOS
+
+  Created by Raphael on 07/02/2021.
+  
+*/
+
+"controller.chooseSport.title" = "Choose your sport";
+"controller.favorites.title" = "Your favorite teams";

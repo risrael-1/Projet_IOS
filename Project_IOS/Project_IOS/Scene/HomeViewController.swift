@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             let chooseSportViewController = ChooseSportViewController(nibName: "ChooseSportViewController", bundle: nil)
             self.navigationController?.pushViewController(chooseSportViewController, animated: true)
         }

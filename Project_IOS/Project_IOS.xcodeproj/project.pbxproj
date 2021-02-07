@@ -9,9 +9,17 @@
 /* Begin PBXBuildFile section */
 		6428747425BF33B30097B32C /* ChooseSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428747225BF33B30097B32C /* ChooseSportViewController.swift */; };
 		6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428747325BF33B30097B32C /* ChooseSportViewController.xib */; };
-		6428747825BF353F0097B32C /* connectApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428747725BF353F0097B32C /* connectApi.swift */; };
 		643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643937C925BF323500B06CB4 /* HomeViewController.swift */; };
 		643937CC25BF323500B06CB4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 643937CA25BF323500B06CB4 /* HomeViewController.xib */; };
+		647AC9D025D05D9D00710BB5 /* FootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AC9CE25D05D9D00710BB5 /* FootViewController.swift */; };
+		647AC9D125D05D9D00710BB5 /* FootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647AC9CF25D05D9D00710BB5 /* FootViewController.xib */; };
+		647AC9D525D05DAE00710BB5 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AC9D325D05DAE00710BB5 /* BasketViewController.swift */; };
+		647AC9D625D05DAE00710BB5 /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647AC9D425D05DAE00710BB5 /* BasketViewController.xib */; };
+		647AC9DC25D060F200710BB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 647AC9DE25D060F200710BB5 /* Localizable.strings */; };
+		647AC9E425D0685700710BB5 /* FavoriteFootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AC9E225D0685700710BB5 /* FavoriteFootViewController.swift */; };
+		647AC9E525D0685700710BB5 /* FavoriteFootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647AC9E325D0685700710BB5 /* FavoriteFootViewController.xib */; };
+		647AC9E925D0687F00710BB5 /* FavoriteBasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AC9E725D0687F00710BB5 /* FavoriteBasketViewController.swift */; };
+		647AC9EA25D0687F00710BB5 /* FavoriteBasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647AC9E825D0687F00710BB5 /* FavoriteBasketViewController.xib */; };
 		64D149BC25BCA2BC00ACA836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D149BB25BCA2BC00ACA836 /* AppDelegate.swift */; };
 		64D149C525BCA2BD00ACA836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D149C425BCA2BD00ACA836 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -19,9 +27,18 @@
 /* Begin PBXFileReference section */
 		6428747225BF33B30097B32C /* ChooseSportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSportViewController.swift; sourceTree = "<group>"; };
 		6428747325BF33B30097B32C /* ChooseSportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseSportViewController.xib; sourceTree = "<group>"; };
-		6428747725BF353F0097B32C /* connectApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectApi.swift; sourceTree = "<group>"; };
 		643937C925BF323500B06CB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		643937CA25BF323500B06CB4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		647AC9CE25D05D9D00710BB5 /* FootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootViewController.swift; sourceTree = "<group>"; };
+		647AC9CF25D05D9D00710BB5 /* FootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootViewController.xib; sourceTree = "<group>"; };
+		647AC9D325D05DAE00710BB5 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		647AC9D425D05DAE00710BB5 /* BasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewController.xib; sourceTree = "<group>"; };
+		647AC9DD25D060F200710BB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		647AC9E025D060F400710BB5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		647AC9E225D0685700710BB5 /* FavoriteFootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFootViewController.swift; sourceTree = "<group>"; };
+		647AC9E325D0685700710BB5 /* FavoriteFootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteFootViewController.xib; sourceTree = "<group>"; };
+		647AC9E725D0687F00710BB5 /* FavoriteBasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBasketViewController.swift; sourceTree = "<group>"; };
+		647AC9E825D0687F00710BB5 /* FavoriteBasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteBasketViewController.xib; sourceTree = "<group>"; };
 		64D149B825BCA2BC00ACA836 /* Project_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D149BB25BCA2BC00ACA836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D149C425BCA2BD00ACA836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,8 +63,30 @@
 				643937CA25BF323500B06CB4 /* HomeViewController.xib */,
 				6428747225BF33B30097B32C /* ChooseSportViewController.swift */,
 				6428747325BF33B30097B32C /* ChooseSportViewController.xib */,
+				647AC9CE25D05D9D00710BB5 /* FootViewController.swift */,
+				647AC9CF25D05D9D00710BB5 /* FootViewController.xib */,
+				647AC9D325D05DAE00710BB5 /* BasketViewController.swift */,
+				647AC9D425D05DAE00710BB5 /* BasketViewController.xib */,
+				647AC9E225D0685700710BB5 /* FavoriteFootViewController.swift */,
+				647AC9E325D0685700710BB5 /* FavoriteFootViewController.xib */,
+				647AC9E725D0687F00710BB5 /* FavoriteBasketViewController.swift */,
+				647AC9E825D0687F00710BB5 /* FavoriteBasketViewController.xib */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		647AC9C325D0581B00710BB5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		647AC9C425D0582200710BB5 /* Modele */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modele;
 			sourceTree = "<group>";
 		};
 		64D149AF25BCA2BC00ACA836 = {
@@ -69,11 +108,13 @@
 		64D149BA25BCA2BC00ACA836 /* Project_IOS */ = {
 			isa = PBXGroup;
 			children = (
-				6428747725BF353F0097B32C /* connectApi.swift */,
+				647AC9C425D0582200710BB5 /* Modele */,
+				647AC9C325D0581B00710BB5 /* Service */,
 				643937C025BF30E500B06CB4 /* Scene */,
 				64D149BB25BCA2BC00ACA836 /* AppDelegate.swift */,
 				64D149C425BCA2BD00ACA836 /* Assets.xcassets */,
 				64D149C925BCA2BD00ACA836 /* Info.plist */,
+				647AC9DE25D060F200710BB5 /* Localizable.strings */,
 			);
 			path = Project_IOS;
 			sourceTree = "<group>";
@@ -119,6 +160,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 64D149AF25BCA2BC00ACA836;
 			productRefGroup = 64D149B925BCA2BC00ACA836 /* Products */;
@@ -135,8 +177,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647AC9E525D0685700710BB5 /* FavoriteFootViewController.xib in Resources */,
 				6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */,
+				647AC9DC25D060F200710BB5 /* Localizable.strings in Resources */,
 				64D149C525BCA2BD00ACA836 /* Assets.xcassets in Resources */,
+				647AC9EA25D0687F00710BB5 /* FavoriteBasketViewController.xib in Resources */,
+				647AC9D625D05DAE00710BB5 /* BasketViewController.xib in Resources */,
+				647AC9D125D05D9D00710BB5 /* FootViewController.xib in Resources */,
 				643937CC25BF323500B06CB4 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,14 +195,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647AC9D525D05DAE00710BB5 /* BasketViewController.swift in Sources */,
 				64D149BC25BCA2BC00ACA836 /* AppDelegate.swift in Sources */,
+				647AC9E425D0685700710BB5 /* FavoriteFootViewController.swift in Sources */,
+				647AC9E925D0687F00710BB5 /* FavoriteBasketViewController.swift in Sources */,
 				6428747425BF33B30097B32C /* ChooseSportViewController.swift in Sources */,
+				647AC9D025D05D9D00710BB5 /* FootViewController.swift in Sources */,
 				643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */,
-				6428747825BF353F0097B32C /* connectApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		647AC9DE25D060F200710BB5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				647AC9DD25D060F200710BB5 /* en */,
+				647AC9E025D060F400710BB5 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		64D149CA25BCA2BD00ACA836 /* Debug */ = {
