@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Team {
+class Team: CustomStringConvertible {
     var name: String
     var score: Int
     var logo: URL?

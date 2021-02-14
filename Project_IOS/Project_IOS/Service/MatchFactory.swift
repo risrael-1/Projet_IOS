@@ -10,24 +10,32 @@ import Foundation
 class MatchFactory {
     
     public static func matchFromDictionary(_ dict: [String: Any]) -> Foot? {
-        guard let league = dict["league"] as? String else {
-            print("league")
+        guard let league = dict["league"] as? String,
+              let round = dict["round"] as? Int,
+              let date = dict["date"] as? String,
+              let team1Any = dict["team1"] as? [String: Any],
+              let team2Any = dict["team2"] as? [String: Any] else {
             return nil
         }
-        guard let round = dict["round"] as? Int else {
-            print("rou")
-            return nil
-        }
-        guard let date = dict["date"] as? String else {
-            print("da")
-            return nil
-        }
+        
+        let team1 = self.teamFromElement(team1Any)
+        let team2 = self.teamFromElement(team2Any)
         let id = dict["id"] as? Int
-        let team1 = dict["team1"] as? String
-        let team2 = dict["team2"] as? String
         
-        
+        print(team1.name)
+        print(team2)
         return Foot(id: id, league: league, round: round, date: date, team1: team1, team2: team2)
+    }
+    
+    public static func teamFromElement(_ element: [String: Any]) -> Team {
+        guard let name = element["name"] as? String,
+              let score = element["score"] as? Int else {
+            return Team(name: "error", score: 0, logo: URL(string: "https://miro.medium.com/max/978/1*pUEZd8z__1p-7ICIO1NZFA.png"))
+        }
+        let logo = element["logo"] as? String
+        let logoURL = logo != nil ? URL(string: logo!) : nil
+        return Team(name: name, score: score, logo: logoURL)
+        
     }
     
     

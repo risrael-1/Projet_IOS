@@ -48,7 +48,7 @@ extension FootViewController: UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let foot = self.foot[indexPath.row] // recuperer le café à la bonne ligne
         let cell = self.getFootCell(tableView: tableView)
-        cell.textLabel?.text = foot.league
+        cell.textLabel?.text = "\(foot.team1.name) : \(foot.team1.score) VS \(foot.team2.score) : \(foot.team2.name)"
         return cell
     }
 
