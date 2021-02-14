@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FootViewController" customModule="Project_IOS" customModuleProvider="target">
             <connections>
+                <outlet property="footTableView" destination="NL3-4R-wcf" id="Yn7-5R-ofp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
