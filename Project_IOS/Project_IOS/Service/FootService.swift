@@ -26,10 +26,8 @@ class FootService {
                 completion([])
                 return
             }
-            print(matchs)
             let res = matchs.compactMap(MatchFactory.matchFromDictionary(_:))
             completion(res)
-            print(res)
         }
         task.resume() // Lance le telechargement
     }
