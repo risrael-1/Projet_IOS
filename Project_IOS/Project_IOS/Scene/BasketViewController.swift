@@ -23,6 +23,7 @@ class BasketViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
         
         self.basketTableView.dataSource = self
+        self.basketTableView.delegate = self
     }
     
     @objc func handleFavorite(){
@@ -70,5 +71,20 @@ extension BasketViewController: UITableViewDataSource {
             return UITableViewCell(style: .default, reuseIdentifier: "league_identifier")
         }
         return cell
+    }
+}
+
+extension BasketViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let league = self.leagues[indexPath.row]
+        let controller = BasketMatchesViewController.newInstance(league: league)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let league = self.leagues[sourceIndexPath.row]
+        self.leagues.remove(at: sourceIndexPath.row)
+        self.leagues.insert(league, at: destinationIndexPath.row)
+        
     }
 }
