@@ -128,9 +128,9 @@
 				610809EC25E29219007A96C7 /* BasketMatchesViewController.swift */,
 				610809ED25E29219007A96C7 /* BasketMatchesViewController.xib */,
 				646BD21F25E3035D008FD727 /* MatchViewController.swift */,
+				646BD22025E3035D008FD727 /* MatchViewController.xib */,
 				61D4802825E5027400CCC45F /* BasketMatchDetailViewController.swift */,
 				61D4802925E5027400CCC45F /* BasketMatchDetailViewController.xib */,
-				646BD22025E3035D008FD727 /* MatchViewController.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
