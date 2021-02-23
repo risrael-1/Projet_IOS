@@ -20,6 +20,7 @@ class FootViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
 
         self.footTableView.dataSource = self
+        self.footTableView.delegate = self
     }
 
     @objc func handleFavorite(){
@@ -57,5 +58,13 @@ extension FootViewController: UITableViewDataSource {
             return UITableViewCell(style: .default, reuseIdentifier: "foot_identifier")
         }
         return cell
+    }
+}
+
+extension FootViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let foot = self.foot[indexPath.row]
+        let controller = MatchViewController.newInstance(foot: foot)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

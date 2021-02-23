@@ -22,8 +22,6 @@ class MatchFactory {
         let team2 = self.teamFromElement(team2Any)
         let id = dict["id"] as? Int
         
-        print(team1.name)
-        print(team2)
         return Foot(id: id, league: league, round: round, date: date, team1: team1, team2: team2)
     }
     
