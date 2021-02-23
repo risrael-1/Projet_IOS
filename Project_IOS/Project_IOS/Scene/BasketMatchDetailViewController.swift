@@ -38,6 +38,7 @@ class BasketMatchDetailViewController: UIViewController {
     var match: BasketballMatch!
     var matchService: BasketMatchService = BasketMatchService()
     var imageService: ImageService = ImageService()
+    var favouriteBasketService: FavouriteBasketService = FavouriteBasketService()
     
     
     static func newInstance(match: BasketballMatch) -> BasketMatchDetailViewController {
@@ -60,7 +61,13 @@ class BasketMatchDetailViewController: UIViewController {
         self.q4HomeNameLabel.text = NSLocalizedString("controller.basketMatchDetails.q4", comment: "")
         self.q4AwayNameLabel.text = NSLocalizedString("controller.basketMatchDetails.q4", comment: "")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
+        
+        if favouriteBasketService.isSaved(id: self.match.id ?? 0) {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteFavourite))
+        }else {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
+        }
+        
         if let id = self.match.id {
             self.matchService.getMatchInfo(id: id) { (match) in
                 DispatchQueue.main.sync {
@@ -74,8 +81,33 @@ class BasketMatchDetailViewController: UIViewController {
         
     }
     @objc func handleFavorite(){
-        let controller = FavoriteBasketViewController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        let fav = FavouriteBasketFactory.favouriteFromBasketMatch(self.match) ?? FavouriteBasket(id: 0, league: "", date: "", team1: Team(name: "", score: 0, logo: URL(string: "https://miro.medium.com/max/978/1*pUEZd8z__1p-7ICIO1NZFA.png")), team2: Team(name: "", score: 0, logo: URL(string: "https://miro.medium.com/max/978/1*pUEZd8z__1p-7ICIO1NZFA.png")))
+        
+        self.favouriteBasketService.create(favouriteBasket: fav) { (success) in
+            DispatchQueue.main.sync {
+                if success {
+                    let controller = FavoriteBasketViewController()
+                    self.navigationController?.pushViewController(controller, animated: true)
+                }else{
+                    print("pas oK")
+                    //alerte pas ok
+                }
+            }
+        }
+        
+        
+    }
+    
+    @objc func deleteFavourite(){
+        self.favouriteBasketService.delete(id: self.match.id ?? 0) { (success) in
+            if success {
+                DispatchQueue.main.sync {
+                    let controller = BasketMatchesViewController()
+                    self.navigationController?.pushViewController(controller, animated: true)
+                }
+                
+            }
+        }
     }
     
     private func reloadUI(){

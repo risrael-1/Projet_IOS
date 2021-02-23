@@ -18,6 +18,7 @@ class BasketballMatch: CustomStringConvertible {
     var country: BasketCountry
     var league: League
     var teams: BasketTeams
+    var isSaved: Bool
     var description: String {
         "Match [\(self.id ?? 0), \(self.date), \(self.time), \(self.timezone), \(self.status), \(self.teams), \(self.country), \(self.league)]"
     }
@@ -31,5 +32,6 @@ class BasketballMatch: CustomStringConvertible {
         self.country = country
         self.league = league
         self.teams = teams
+        self.isSaved = false
     }
 }
