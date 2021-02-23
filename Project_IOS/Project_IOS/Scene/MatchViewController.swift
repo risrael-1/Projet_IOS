@@ -28,10 +28,43 @@ class MatchViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "\(foot.team1.name) VS \(foot.team2.name)"
+        
+        if let id = self.foot.id {
+            self.footService.getMatchInfo(id: id) { (foot) in
+                DispatchQueue.main.sync {
+                    self.foot = foot
+                    self.reloadUI()
+                    self.fetchAndReloadImageView()
+                }
+            }
+        }
+    }
+    
+    private func reloadUI(){
+        guard let foot = self.foot else {
+            return
+        }
         self.team1.text = "\(foot.team1.name)"
         self.team2.text = "\(foot.team2.name)"
         self.scoreTeam1.text = "\(foot.team1.score)"
         self.scoreTeam2.text = "\(foot.team2.score)"
+    }
+    
+    private func fetchAndReloadImageView(){
+        
+        if let team1 = self.foot.team1.logo,
+           let team2 = self.foot.team2.logo {
+            self.imageService.getImage(from: team1) { (img) in
+                DispatchQueue.main.sync {
+                    self.logoTeam1.image = img
+                }
+            }
+            self.imageService.getImage(from: team2) { (img) in
+                DispatchQueue.main.sync {
+                    self.logoTeam2.image = img
+                }
+            }
+        }
     }
 
 
