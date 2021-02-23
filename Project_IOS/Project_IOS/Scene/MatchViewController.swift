@@ -17,6 +17,7 @@ class MatchViewController: UIViewController {
     @IBOutlet weak var scoreTeam2: UILabel!
     @IBOutlet weak var logoTeam1: UIImageView!
     @IBOutlet weak var logoTeam2: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
     
     static func newInstance(foot: Foot) -> MatchViewController {
         let controller = MatchViewController()
@@ -48,6 +49,7 @@ class MatchViewController: UIViewController {
         self.team2.text = "\(foot.team2.name)"
         self.scoreTeam1.text = "\(foot.team1.score)"
         self.scoreTeam2.text = "\(foot.team2.score)"
+        self.dateLabel.text = "\(foot.date)"
     }
     
     private func fetchAndReloadImageView(){

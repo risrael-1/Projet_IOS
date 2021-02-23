@@ -32,6 +32,9 @@
 		61B133F525DB2C3F0097F7B9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B133F425DB2C3F0097F7B9 /* ImageService.swift */; };
 		61D4802A25E5027400CCC45F /* BasketMatchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4802825E5027400CCC45F /* BasketMatchDetailViewController.swift */; };
 		61D4802B25E5027400CCC45F /* BasketMatchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D4802925E5027400CCC45F /* BasketMatchDetailViewController.xib */; };
+		61D4803525E5738100CCC45F /* FavouriteBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4803425E5738100CCC45F /* FavouriteBasket.swift */; };
+		61D4803825E573CD00CCC45F /* FavouriteBasketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4803725E573CD00CCC45F /* FavouriteBasketService.swift */; };
+		61D4803B25E573FD00CCC45F /* FavouriteBasketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4803A25E573FD00CCC45F /* FavouriteBasketFactory.swift */; };
 		6428747425BF33B30097B32C /* ChooseSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428747225BF33B30097B32C /* ChooseSportViewController.swift */; };
 		6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428747325BF33B30097B32C /* ChooseSportViewController.xib */; };
 		643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643937C925BF323500B06CB4 /* HomeViewController.swift */; };
@@ -77,6 +80,9 @@
 		61B133F425DB2C3F0097F7B9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		61D4802825E5027400CCC45F /* BasketMatchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketMatchDetailViewController.swift; sourceTree = "<group>"; };
 		61D4802925E5027400CCC45F /* BasketMatchDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketMatchDetailViewController.xib; sourceTree = "<group>"; };
+		61D4803425E5738100CCC45F /* FavouriteBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBasket.swift; sourceTree = "<group>"; };
+		61D4803725E573CD00CCC45F /* FavouriteBasketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBasketService.swift; sourceTree = "<group>"; };
+		61D4803A25E573FD00CCC45F /* FavouriteBasketFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBasketFactory.swift; sourceTree = "<group>"; };
 		6428747225BF33B30097B32C /* ChooseSportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSportViewController.swift; sourceTree = "<group>"; };
 		6428747325BF33B30097B32C /* ChooseSportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseSportViewController.xib; sourceTree = "<group>"; };
 		643937C925BF323500B06CB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +156,8 @@
 				610809E625E28C48007A96C7 /* BasketMatchFactory.swift */,
 				610809E925E28F63007A96C7 /* BasketMatchStatusFactory.swift */,
 				610809F125E29C01007A96C7 /* BasketMatchService.swift */,
+				61D4803725E573CD00CCC45F /* FavouriteBasketService.swift */,
+				61D4803A25E573FD00CCC45F /* FavouriteBasketFactory.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 				610809DA25E286F1007A96C7 /* BasketScore.swift */,
 				610809E025E289E5007A96C7 /* BasketCountry.swift */,
 				610809F825E2A13C007A96C7 /* Season.swift */,
+				61D4803425E5738100CCC45F /* FavouriteBasket.swift */,
 			);
 			path = Modele;
 			sourceTree = "<group>";
@@ -299,9 +308,11 @@
 				614AD2A525D9D93E005A0DFC /* Foot.swift in Sources */,
 				610809E125E289E5007A96C7 /* BasketCountry.swift in Sources */,
 				61B133EF25DB1F4B0097F7B9 /* LeagueFactory.swift in Sources */,
+				61D4803825E573CD00CCC45F /* FavouriteBasketService.swift in Sources */,
 				614AD2AA25D9D955005A0DFC /* FootService.swift in Sources */,
 				61B133F525DB2C3F0097F7B9 /* ImageService.swift in Sources */,
 				610809EA25E28F63007A96C7 /* BasketMatchStatusFactory.swift in Sources */,
+				61D4803B25E573FD00CCC45F /* FavouriteBasketFactory.swift in Sources */,
 				610809E425E28A97007A96C7 /* BasketCountryFactory.swift in Sources */,
 				610809F225E29C01007A96C7 /* BasketMatchService.swift in Sources */,
 				646BD22125E3035D008FD727 /* MatchViewController.swift in Sources */,
@@ -310,6 +321,7 @@
 				610809F925E2A13C007A96C7 /* Season.swift in Sources */,
 				647AC9D025D05D9D00710BB5 /* FootViewController.swift in Sources */,
 				643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */,
+				61D4803525E5738100CCC45F /* FavouriteBasket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
