@@ -8,3 +8,10 @@
 
 "controller.chooseSport.title" = "Choisissez votre sport";
 "controller.favorites.title" = "Vos équipes favorites";
+
+
+"controller.basketMatchDetails.q1" = "Quart-temps 1";
+"controller.basketMatchDetails.q2" = "Quart-temps 2";
+"controller.basketMatchDetails.q3" = "Quart-temps 3";
+"controller.basketMatchDetails.q4" = "Quart-temps 4";
+"controller.basketMatchDetails.overtime" = "Temps supp.";

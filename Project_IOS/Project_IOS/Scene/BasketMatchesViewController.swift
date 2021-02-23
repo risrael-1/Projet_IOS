@@ -21,6 +21,7 @@ class BasketMatchesViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
         
         self.matchTableView.dataSource = self
+        self.matchTableView.delegate = self
     }
     
     @objc func handleFavorite(){
@@ -68,5 +69,13 @@ extension BasketMatchesViewController: UITableViewDataSource {
             return UITableViewCell(style: .default, reuseIdentifier: "match_identifier")
         }
         return cell
+    }
+}
+
+extension BasketMatchesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let match = self.matchs[indexPath.row] // recuperer le café à la bonne ligne
+        let controller = BasketMatchDetailViewController.newInstance(match: match)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

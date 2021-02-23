@@ -30,6 +30,8 @@
 		61B133EF25DB1F4B0097F7B9 /* LeagueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B133EE25DB1F4B0097F7B9 /* LeagueFactory.swift */; };
 		61B133F225DB1F7E0097F7B9 /* APIResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B133F125DB1F7E0097F7B9 /* APIResponseFactory.swift */; };
 		61B133F525DB2C3F0097F7B9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B133F425DB2C3F0097F7B9 /* ImageService.swift */; };
+		61D4802A25E5027400CCC45F /* BasketMatchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D4802825E5027400CCC45F /* BasketMatchDetailViewController.swift */; };
+		61D4802B25E5027400CCC45F /* BasketMatchDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D4802925E5027400CCC45F /* BasketMatchDetailViewController.xib */; };
 		6428747425BF33B30097B32C /* ChooseSportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428747225BF33B30097B32C /* ChooseSportViewController.swift */; };
 		6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6428747325BF33B30097B32C /* ChooseSportViewController.xib */; };
 		643937CB25BF323500B06CB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643937C925BF323500B06CB4 /* HomeViewController.swift */; };
@@ -71,6 +73,8 @@
 		61B133EE25DB1F4B0097F7B9 /* LeagueFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueFactory.swift; sourceTree = "<group>"; };
 		61B133F125DB1F7E0097F7B9 /* APIResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseFactory.swift; sourceTree = "<group>"; };
 		61B133F425DB2C3F0097F7B9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		61D4802825E5027400CCC45F /* BasketMatchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketMatchDetailViewController.swift; sourceTree = "<group>"; };
+		61D4802925E5027400CCC45F /* BasketMatchDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketMatchDetailViewController.xib; sourceTree = "<group>"; };
 		6428747225BF33B30097B32C /* ChooseSportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSportViewController.swift; sourceTree = "<group>"; };
 		6428747325BF33B30097B32C /* ChooseSportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseSportViewController.xib; sourceTree = "<group>"; };
 		643937C925BF323500B06CB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				647AC9E825D0687F00710BB5 /* FavoriteBasketViewController.xib */,
 				610809EC25E29219007A96C7 /* BasketMatchesViewController.swift */,
 				610809ED25E29219007A96C7 /* BasketMatchesViewController.xib */,
+				61D4802825E5027400CCC45F /* BasketMatchDetailViewController.swift */,
+				61D4802925E5027400CCC45F /* BasketMatchDetailViewController.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				647AC9E525D0685700710BB5 /* FavoriteFootViewController.xib in Resources */,
+				61D4802B25E5027400CCC45F /* BasketMatchDetailViewController.xib in Resources */,
 				6428747525BF33B30097B32C /* ChooseSportViewController.xib in Resources */,
 				610809EF25E29219007A96C7 /* BasketMatchesViewController.xib in Resources */,
 				647AC9DC25D060F200710BB5 /* Localizable.strings in Resources */,
@@ -276,6 +283,7 @@
 				610809DB25E286F1007A96C7 /* BasketScore.swift in Sources */,
 				610809EE25E29219007A96C7 /* BasketMatchesViewController.swift in Sources */,
 				61B133E625DB158E0097F7B9 /* APIResponse.swift in Sources */,
+				61D4802A25E5027400CCC45F /* BasketMatchDetailViewController.swift in Sources */,
 				61B133E925DB1AED0097F7B9 /* League.swift in Sources */,
 				610809D525E28520007A96C7 /* BasketTeam.swift in Sources */,
 				614AD2A425D9D93E005A0DFC /* Team.swift in Sources */,
