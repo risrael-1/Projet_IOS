@@ -15,3 +15,4 @@
 "controller.basketMatchDetails.q3" = "3rd quarter";
 "controller.basketMatchDetails.q4" = "4th quarter";
 "controller.basketMatchDetails.overtime" = "Overtime";
+"controller.basketMatchDetails.dateFormat" = "yyyy-dd-MM";

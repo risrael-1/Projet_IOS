@@ -35,7 +35,6 @@ class BasketMatchDetailViewController: UIViewController {
     @IBOutlet weak var q3AwayScoreLabel: UILabel!
     @IBOutlet weak var q4AwayScoreLabel: UILabel!
     @IBOutlet weak var overtimeAwayScoreLabel: UILabel!
-    @IBOutlet weak var countryFlagImageView: UIImageView!
     var match: BasketballMatch!
     var matchService: BasketMatchService = BasketMatchService()
     var imageService: ImageService = ImageService()
@@ -61,6 +60,7 @@ class BasketMatchDetailViewController: UIViewController {
         self.q4HomeNameLabel.text = NSLocalizedString("controller.basketMatchDetails.q4", comment: "")
         self.q4AwayNameLabel.text = NSLocalizedString("controller.basketMatchDetails.q4", comment: "")
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
         if let id = self.match.id {
             self.matchService.getMatchInfo(id: id) { (match) in
                 DispatchQueue.main.sync {
@@ -72,6 +72,10 @@ class BasketMatchDetailViewController: UIViewController {
         }
         
         
+    }
+    @objc func handleFavorite(){
+        let controller = FavoriteBasketViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     private func reloadUI(){
@@ -97,8 +101,7 @@ class BasketMatchDetailViewController: UIViewController {
     private func fetchAndReloadImageView(){
         
         if let homeLogo = self.match?.teams.home.logo,
-           let awayLogo = self.match?.teams.away.logo,
-           let countryFlag = self.match.country.flag {
+           let awayLogo = self.match?.teams.away.logo{
             self.imageService.getImage(from: homeLogo) { (img) in
                 DispatchQueue.main.sync {
                     self.homeTeamImageView.image = img
@@ -107,12 +110,6 @@ class BasketMatchDetailViewController: UIViewController {
             self.imageService.getImage(from: awayLogo) { (img) in
                 DispatchQueue.main.sync {
                     self.awayTeamImageView.image = img
-                }
-            }
-            self.imageService.getImage(from: countryFlag) { (img) in
-                DispatchQueue.main.sync {
-                    self.countryFlagImageView.image = img
-                
                 }
             }
         }

@@ -13,7 +13,6 @@
                 <outlet property="awayTeamImageView" destination="OY7-LL-jZZ" id="S70-Yl-pUd"/>
                 <outlet property="awayTeamNameLabel" destination="1Gp-9z-HZf" id="N6u-18-chf"/>
                 <outlet property="awayTeamScoreLabel" destination="gZ3-3n-uFG" id="kRX-WE-vTs"/>
-                <outlet property="countryFlagImageView" destination="SB3-Ia-Xko" id="Bz6-tT-QRL"/>
                 <outlet property="homeTeamImageView" destination="ObG-qF-8XP" id="fmq-Hw-PH0"/>
                 <outlet property="homeTeamNameLabel" destination="MMA-iS-fhK" id="OFd-D8-0jf"/>
                 <outlet property="homeTeamScoreLabel" destination="dRM-wS-5v4" id="wkO-RS-Vpt"/>
@@ -233,13 +232,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SB3-Ia-Xko">
-                    <rect key="frame" x="157" y="752" width="100" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="6L3-5O-jdv"/>
-                        <constraint firstAttribute="width" constant="100" id="7DL-7C-IcX"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwF-Ck-2V7">
                     <rect key="frame" x="233" y="672" width="11" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -295,7 +287,6 @@
                 <constraint firstItem="fr9-UV-IAT" firstAttribute="top" secondItem="0aN-Nd-KAz" secondAttribute="bottom" constant="20" id="ZL1-Y8-ERk"/>
                 <constraint firstItem="yXL-fL-A3d" firstAttribute="leading" secondItem="vit-20-SmW" secondAttribute="trailing" constant="22" id="Zdm-hR-phu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6ho-2W-MTk" secondAttribute="trailing" constant="10" id="aIk-zT-LMX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SB3-Ia-Xko" secondAttribute="bottom" constant="10" id="abJ-Xd-wDT"/>
                 <constraint firstItem="ObG-qF-8XP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="apm-uW-X5c"/>
                 <constraint firstItem="G9J-IN-2eC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b2a-FN-pBQ"/>
                 <constraint firstItem="FwP-Ej-siH" firstAttribute="top" secondItem="jfm-7V-BiV" secondAttribute="bottom" constant="20" id="bGc-20-eHQ"/>
@@ -308,7 +299,6 @@
                 <constraint firstItem="94h-Sq-hHK" firstAttribute="top" secondItem="1xk-GO-Co4" secondAttribute="bottom" constant="20" id="jnk-0K-Sv2"/>
                 <constraint firstItem="rwF-Ck-2V7" firstAttribute="top" secondItem="kkN-CL-gx1" secondAttribute="bottom" constant="20" id="kcn-YK-22n"/>
                 <constraint firstItem="rwF-Ck-2V7" firstAttribute="leading" secondItem="G9J-IN-2eC" secondAttribute="trailing" constant="22" id="mSD-oM-DCd"/>
-                <constraint firstItem="SB3-Ia-Xko" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n0T-Qj-c5f"/>
                 <constraint firstItem="dRM-wS-5v4" firstAttribute="top" secondItem="ObG-qF-8XP" secondAttribute="bottom" constant="50" id="pq1-hm-15w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gZ3-3n-uFG" secondAttribute="trailing" constant="78" id="pup-rU-Fm8"/>
                 <constraint firstItem="O2l-Q1-1Cc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="252" id="pwh-P1-vKA"/>

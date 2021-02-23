@@ -15,3 +15,4 @@
 "controller.basketMatchDetails.q3" = "Quart-temps 3";
 "controller.basketMatchDetails.q4" = "Quart-temps 4";
 "controller.basketMatchDetails.overtime" = "Temps supp.";
+"controller.basketMatchDetails.dateFormat" = "dd-MM-yyyy";
