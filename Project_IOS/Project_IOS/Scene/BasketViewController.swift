@@ -19,7 +19,7 @@ class BasketViewController: UIViewController {
         super.viewDidLoad()
         self.title = "BASKET"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(handleFavorite))
         
         self.basketTableView.dataSource = self
         self.basketTableView.delegate = self

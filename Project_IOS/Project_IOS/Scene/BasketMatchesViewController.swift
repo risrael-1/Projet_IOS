@@ -18,10 +18,17 @@ class BasketMatchesViewController: UIViewController {
         super.viewDidLoad()
         self.title = "\(self.league.name) - \(self.league.seasons ?? "")"
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(handleFavorite))
+        
         self.matchTableView.dataSource = self
         self.matchTableView.delegate = self
     }
     
+    @objc func handleFavorite(){
+        let controller = FavoriteBasketViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+    }
     
     
     static func newInstance(league: League) -> BasketMatchesViewController {

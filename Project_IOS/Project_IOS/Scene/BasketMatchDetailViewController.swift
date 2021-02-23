@@ -61,12 +61,11 @@ class BasketMatchDetailViewController: UIViewController {
         self.q4HomeNameLabel.text = NSLocalizedString("controller.basketMatchDetails.q4", comment: "")
         self.q4AwayNameLabel.text = NSLocalizedString("controller.basketMatchDetails.q4", comment: "")
         
-        
-        if favouriteBasketService.isSaved(id: self.match.id ?? 0) {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteFavourite))
-        }else {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleFavorite))
-        }
+    
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleFavorite)),
+            UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteFavourite))
+        ]
         
         if let id = self.match.id {
             self.matchService.getMatchInfo(id: id) { (match) in
@@ -102,7 +101,7 @@ class BasketMatchDetailViewController: UIViewController {
         self.favouriteBasketService.delete(id: self.match.id ?? 0) { (success) in
             if success {
                 DispatchQueue.main.sync {
-                    let controller = BasketMatchesViewController()
+                    let controller = FavoriteBasketViewController()
                     self.navigationController?.pushViewController(controller, animated: true)
                 }
                 

@@ -11,6 +11,7 @@ class FavoriteBasketViewController: UIViewController {
     
     @IBOutlet weak var favouriteBasketTableView: UITableView!
     let favouriteBasketService: FavouriteBasketService = FavouriteBasketService()
+    let basketMatchService: BasketMatchService = BasketMatchService()
     var favourites: [FavouriteBasket] = []
     
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class FavoriteBasketViewController: UIViewController {
         
         
         self.favouriteBasketTableView.dataSource = self
+        self.favouriteBasketTableView.delegate = self
     }
 
     
@@ -57,11 +59,18 @@ extension FavoriteBasketViewController: UITableViewDataSource {
 }
 
 extension FavoriteBasketViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let coffee = self.coffees[indexPath.row] // recuperer le café à la bonne ligne
-//        let controller = ProductViewController.newInstance(coffee: coffee)
-//        self.navigationController?.pushViewController(controller, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let fav = self.favourites[indexPath.row] // recuperer le café à la bonne ligne
+        print("toto")
+        basketMatchService.getMatchInfo(id: fav.id ?? 0) { (match) in
+            DispatchQueue.main.sync {
+                let controller = BasketMatchDetailViewController.newInstance(match: match!)
+                self.navigationController?.pushViewController(controller, animated: true)
+            }
+            
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let fav = self.favourites[indexPath.row]
