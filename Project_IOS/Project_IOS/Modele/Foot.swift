@@ -10,7 +10,7 @@ import Foundation
 class Foot: CustomStringConvertible {
     var id: Int?
     var league: String
-    var round: Int
+    var round: String
     var date: String
     var team1: Team
     var team2: Team
@@ -19,7 +19,7 @@ class Foot: CustomStringConvertible {
     }
 
 
-    public init(id: Int?, league: String, round: Int, date: String, team1: Team, team2: Team) {
+    public init(id: Int?, league: String, round: String, date: String, team1: Team, team2: Team) {
         self.id = id
         self.league = league
         self.round = round

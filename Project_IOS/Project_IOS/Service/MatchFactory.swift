@@ -11,7 +11,7 @@ class MatchFactory {
     
     public static func matchFromDictionary(_ dict: [String: Any]) -> Foot? {
         guard let league = dict["league"] as? String,
-              let round = dict["round"] as? Int,
+              let round = dict["round"] as? String,
               let date = dict["date"] as? String,
               let team1Any = dict["team1"] as? [String: Any],
               let team2Any = dict["team2"] as? [String: Any] else {

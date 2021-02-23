@@ -19,7 +19,6 @@ class FootService {
                 return
                 
             }
-            
             // try? -> permet de renvoyer nil cas d'erreur de la fonction jsonObject
             let matchAny = try? JSONSerialization.jsonObject(with: d, options: .allowFragments)
             guard let matchs = matchAny as? [ [String: Any] ] else {
@@ -27,6 +26,7 @@ class FootService {
                 return
             }
             let res = matchs.compactMap(MatchFactory.matchFromDictionary(_:))
+            
             completion(res)
         }
         task.resume() // Lance le telechargement
